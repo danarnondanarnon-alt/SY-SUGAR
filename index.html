@@ -1,1 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S/Y Sugar — Wauquiez Amphitrite 45 MS | Hull #6 of 21 | For Sale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#3d7fc4;
+  --blue-light:#5a96d4;
+  --deep:#1a3560;
+  --navy:#0e2040;
+  --navy-dark:#070f1e;
+  --sky:#eaf2fd;
+  --white:#ffffff;
+  --offwhite:#f6f9fd;
+  --light:#eef4fb;
+  --text:#0e2040;
+  --muted:#4a6080;
+  --muted-light:#7090b0;
+  --accent:#2a9d8f;
+  --gold:#b8952a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--text);overflow-x:hidden}
 
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2.5rem;background:rgba(7,15,30,0.98);backdrop-filter:blur(16px);border-bottom:1px solid rgba(61,127,196,0.18);display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo img{height:34px;display:block;border-radius:3px}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{color:rgba(232,242,253,0.6);text-decoration:none;font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--blue)!important;color:white!important;padding:.42rem 1.1rem;border-radius:3px;letter-spacing:.08em!important}
+
+/* HERO */
+#hero{min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(140deg,#070f1e 0%,#0e2040 40%,#162d5a 75%,#1a3560 100%)}
+.hero-texture{position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 55%,rgba(61,127,196,.1) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(61,127,196,.05) 0%,transparent 45%)}
+.wave-lines{position:absolute;inset:0;overflow:hidden;opacity:.05}
+.wave-lines svg{position:absolute;bottom:0;width:200%;animation:wave 16s linear infinite}
+.wave-lines svg:nth-child(2){animation-delay:-7s;opacity:.4}
+@keyframes wave{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.hero-photos{position:absolute;right:0;top:0;bottom:0;width:48%;display:grid;grid-template-rows:repeat(3,1fr);gap:3px;opacity:.22;mask-image:linear-gradient(to left,rgba(0,0,0,.8) 0%,transparent 100%)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.5) brightness(.75)}
+.hero-content{position:relative;z-index:2;max-width:660px;padding:2rem;margin-left:7vw;padding-top:8rem;padding-bottom:7rem}
+.hero-eyebrow{font-size:.64rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(61,127,196,.8);margin-bottom:2rem;display:flex;align-items:center;gap:1rem}
+.hero-eyebrow::after{content:'';display:block;width:36px;height:1px;background:var(--blue);opacity:.45}
+.hero-logo{margin-bottom:2rem}
+.hero-logo img{height:58px;border-radius:4px}
+.hero-tagline{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2vw,1.3rem);color:rgba(232,242,253,.55);margin-bottom:.6rem;letter-spacing:.04em;font-style:italic}
+.hero-price-row{display:flex;align-items:baseline;gap:1.5rem;margin-bottom:.5rem}
+.hero-price{font-family:'Playfair Display',serif;font-size:2.6rem;color:var(--blue);line-height:1}
+.hero-price-note{font-size:.7rem;color:rgba(232,242,253,.32);letter-spacing:.1em;font-style:italic;max-width:260px;line-height:1.5}
+.hero-location{font-size:.7rem;color:rgba(232,242,253,.35);letter-spacing:.2em;text-transform:uppercase;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3.5rem}
+.btn-primary{background:var(--blue);color:white;padding:.9rem 2.2rem;text-decoration:none;font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:3px;transition:all .22s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-primary:hover{background:#2f6ab0;transform:translateY(-1px);box-shadow:0 8px 24px rgba(61,127,196,.25)}
+.btn-secondary{border:1px solid rgba(232,242,253,.18);color:rgba(232,242,253,.7);padding:.9rem 2.2rem;text-decoration:none;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;border-radius:3px;transition:all .22s;display:inline-flex;align-items:center}
+.btn-secondary:hover{border-color:rgba(61,127,196,.6);color:var(--white)}
+
+/* TRUST BADGES */
+.trust-badges{display:flex;gap:2rem;flex-wrap:wrap}
+.trust-badge{display:flex;align-items:center;gap:.6rem;font-size:.68rem;color:rgba(232,242,253,.4);letter-spacing:.1em;text-transform:uppercase}
+.trust-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);opacity:.7}
+
+.hero-hull{position:absolute;bottom:3.5rem;right:6vw;z-index:2;text-align:center}
+.hero-hull-big{font-family:'Playfair Display',serif;font-size:3.5rem;color:rgba(61,127,196,.25);line-height:1;display:block}
+.hero-hull-label{font-size:.6rem;color:rgba(232,242,253,.2);letter-spacing:.2em;text-transform:uppercase}
+
+.scroll-hint{position:absolute;bottom:3rem;left:7vw;z-index:2;display:flex;align-items:center;gap:.8rem;color:rgba(232,242,253,.2);font-size:.59rem;letter-spacing:.2em;text-transform:uppercase}
+.scroll-line{width:40px;height:1px;background:linear-gradient(to right,rgba(61,127,196,.4),transparent)}
+
+/* WHY THIS VESSEL */
+#why{background:var(--navy);padding:6rem 7vw}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.why-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(61,127,196,.12);padding:1.8rem 1.5rem;border-radius:4px;transition:all .3s}
+.why-card:hover{background:rgba(61,127,196,.07);border-color:rgba(61,127,196,.25);transform:translateY(-2px)}
+.why-card-icon{font-size:1.6rem;margin-bottom:1rem;display:block}
+.why-card h4{font-family:'Playfair Display',serif;font-size:.98rem;color:rgba(232,242,253,.88);margin-bottom:.5rem;line-height:1.3}
+.why-card p{font-size:.8rem;color:rgba(232,242,253,.45);line-height:1.65}
+.why-highlight{background:rgba(61,127,196,.08);border:1px solid rgba(61,127,196,.18);padding:1.5rem;border-radius:4px;margin-top:2rem}
+.why-highlight p{font-family:'Libre Baskerville',serif;font-style:italic;font-size:.92rem;color:rgba(232,242,253,.65);line-height:1.75}
+
+/* SPECS ICONS SECTION */
+#key-specs{background:var(--offwhite);padding:5rem 7vw}
+.key-specs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.key-spec-card{text-align:center;padding:2.5rem 1.5rem;background:var(--white);border:1px solid rgba(61,127,196,.08);border-radius:6px;transition:all .3s}
+.key-spec-card:hover{border-color:rgba(61,127,196,.2);box-shadow:0 8px 32px rgba(61,127,196,.08);transform:translateY(-2px)}
+.key-spec-icon{margin:0 auto 1.2rem;display:flex;align-items:center;justify-content:center;width:56px;height:56px;background:rgba(61,127,196,.07);border-radius:50%}
+.key-spec-icon svg{width:26px;height:26px;stroke:var(--blue);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.key-spec-num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--deep);line-height:1;margin-bottom:.3rem}
+.key-spec-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:.4rem}
+.key-spec-note{font-size:.76rem;color:var(--muted);line-height:1.45}
+
+/* GALLERY MASONRY */
+#gallery{background:var(--navy);padding:5rem 0}
+.gallery-header{padding:0 7vw;margin-bottom:3rem}
+.masonry-grid{columns:4;gap:4px;padding:0 7vw}
+.masonry-item{break-inside:avoid;margin-bottom:4px;overflow:hidden;cursor:pointer;position:relative}
+.masonry-item img{width:100%;display:block;transition:transform .6s,filter .3s;filter:saturate(.85) brightness(.92)}
+.masonry-item:hover img{transform:scale(1.04);filter:saturate(1.1) brightness(1.05)}
+.masonry-item-label{position:absolute;bottom:0;left:0;right:0;padding:.7rem .9rem;background:linear-gradient(to top,rgba(7,15,30,.88),transparent);color:rgba(232,242,253,.85);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:opacity .3s}
+.masonry-item:hover .masonry-item-label{opacity:1}
+.gallery-footer{padding:2rem 7vw 0;text-align:center}
+.gallery-link{color:rgba(61,127,196,.7);text-decoration:none;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid rgba(61,127,196,.25);padding-bottom:2px;transition:all .2s}
+.gallery-link:hover{color:var(--blue);border-color:var(--blue)}
+
+/* ABOUT */
+#about{background:var(--offwhite);padding:6rem 7vw}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+.survey-badge{background:var(--deep);color:var(--white);padding:1.8rem 2rem;border-radius:4px;display:flex;align-items:center;gap:1.5rem;margin-top:2.5rem}
+.survey-score{font-family:'Playfair Display',serif;font-size:3rem;color:var(--blue);line-height:1;white-space:nowrap}
+.survey-score span{font-size:1rem;color:rgba(232,242,253,.3)}
+.survey-text h4{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(61,127,196,.85);margin-bottom:.3rem}
+.survey-text p{font-size:.8rem;color:rgba(232,242,253,.55);line-height:1.55}
+.survey-dl{margin-top:.8rem}
+.survey-dl a{color:#d4735a;font-size:.7rem;text-decoration:none;border-bottom:1px solid rgba(212,115,90,.3)}
+.stats-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem}
+.stat-block{border-left:3px solid var(--blue);padding-left:1.2rem;padding-top:.2rem;padding-bottom:.2rem}
+.stat-block-num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--deep);line-height:1}
+.stat-block-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-top:.2rem}
+.stat-block-note{font-size:.76rem;color:var(--muted);margin-top:.4rem;line-height:1.4}
+
+/* LIFESTYLE */
+#lifestyle{background:var(--light);padding:6rem 7vw}
+.lifestyle-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-bottom:5rem}
+.lifestyle-grid:last-child{margin-bottom:0}
+.lifestyle-photos{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.lifestyle-photo{overflow:hidden;aspect-ratio:4/3;cursor:pointer}
+.lifestyle-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .3s}
+.lifestyle-photo:hover img{transform:scale(1.05);filter:saturate(1.05) brightness(1.05)}
+.lifestyle-photo.wide{grid-column:1/3;aspect-ratio:16/7}
+.lifestyle-feature{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem}
+.lifestyle-feature-icon{font-size:1.3rem;min-width:32px;text-align:center;margin-top:.1rem}
+.lifestyle-feature h4{font-size:.86rem;font-weight:600;color:var(--deep);margin-bottom:.25rem}
+.lifestyle-feature p{font-size:.8rem;color:var(--muted);line-height:1.65}
+.strong-quote{font-family:'Libre Baskerville',serif;font-style:italic;font-size:1rem;color:var(--deep);border-left:3px solid var(--blue);padding-left:1.5rem;margin:2rem 0;line-height:1.75}
+
+/* SELLER */
+#seller{background:var(--white);padding:6rem 7vw}
+.seller-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:6rem;align-items:start}
+.seller-story{font-family:'Libre Baskerville',serif;font-size:.97rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem;font-style:italic;border-left:3px solid var(--blue);padding-left:1.5rem}
+.seller-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
+.seller-tag{background:rgba(61,127,196,.07);color:var(--blue);font-size:.67rem;padding:.3rem .75rem;border-radius:20px;letter-spacing:.05em;border:1px solid rgba(61,127,196,.13)}
+.redundancy-box{background:var(--light);border:1px solid rgba(61,127,196,.13);padding:1.8rem;border-radius:4px;margin-top:1.8rem}
+.redundancy-box h4{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
+.redundancy-item{display:flex;align-items:flex-start;gap:.8rem;font-size:.81rem;color:var(--muted);margin-bottom:.65rem;line-height:1.5}
+.redundancy-item::before{content:'✓';color:var(--blue);font-weight:700;margin-top:.05rem}
+
+/* WAUQUIEZ */
+#wauquiez{background:var(--navy);color:var(--white);position:relative;overflow:hidden;padding:6rem 7vw}
+#wauquiez::before{content:'WAUQUIEZ';position:absolute;font-family:'Playfair Display',serif;font-size:16vw;font-weight:700;color:rgba(255,255,255,.018);top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;letter-spacing:.1em}
+.wauquiez-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:6rem;align-items:start;position:relative;z-index:1}
+.wauquiez-fact{border-top:1px solid rgba(61,127,196,.12);padding:1.5rem 0}
+.wauquiez-fact h4{font-family:'Playfair Display',serif;font-size:.98rem;color:rgba(61,127,196,.88);margin-bottom:.5rem}
+.wauquiez-fact p{font-size:.84rem;color:rgba(232,242,253,.5);line-height:1.75}
+.wauquiez-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.25rem;color:rgba(232,242,253,.85);line-height:1.6;border-left:3px solid var(--blue);padding-left:2rem;margin-bottom:2.5rem}
+.hull-number{background:rgba(61,127,196,.07);border:1px solid rgba(61,127,196,.18);padding:2.5rem;text-align:center;border-radius:4px}
+.hull-number-big{font-family:'Playfair Display',serif;font-size:4.5rem;color:var(--blue);display:block;line-height:1}
+.hull-number-label{font-size:.65rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(232,242,253,.25);margin-top:.6rem;line-height:1.6}
+
+/* SPECS */
+#specs{background:var(--offwhite);padding:6rem 7vw}
+.specs-intro{display:grid;grid-template-columns:1fr 2.2fr;gap:5rem;margin-bottom:4rem;align-items:start}
+.specs-tabs{display:flex;margin-bottom:3rem;border-bottom:1px solid rgba(14,32,64,.09);overflow-x:auto;scrollbar-width:none}
+.specs-tabs::-webkit-scrollbar{display:none}
+.tab-btn{padding:.85rem 1.5rem;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-light);transition:all .2s;white-space:nowrap;font-family:'DM Sans',sans-serif}
+.tab-btn.active{color:var(--deep);border-bottom-color:var(--blue);font-weight:600}
+.tab-btn:hover{color:var(--deep)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.specs-table{width:100%;border-collapse:collapse}
+.specs-table tr{border-bottom:1px solid rgba(14,32,64,.065)}
+.specs-table tr:last-child{border:none}
+.specs-table tr:hover{background:rgba(61,127,196,.025)}
+.specs-table td{padding:.9rem 0;font-size:.86rem;vertical-align:top}
+.specs-table td:first-child{width:40%;color:var(--muted);font-size:.75rem;letter-spacing:.04em;padding-right:1rem}
+.specs-table td:last-child{color:var(--text);font-weight:500}
+.specs-table a{color:var(--blue);font-size:.7rem;text-decoration:none;border-bottom:1px solid rgba(61,127,196,.28)}
+.spec-tag{display:inline-block;background:rgba(61,127,196,.08);color:var(--blue);font-size:.63rem;padding:.1rem .42rem;border-radius:2px;margin-left:.4rem;letter-spacing:.04em;font-weight:400;border:1px solid rgba(61,127,196,.14)}
+.spec-tag.new{background:rgba(42,157,143,.09);color:var(--accent);border-color:rgba(42,157,143,.18)}
+.spec-tag.key{background:rgba(184,149,42,.09);color:var(--gold);border-color:rgba(184,149,42,.2)}
+
+/* ROUTE */
+#route{background:var(--navy);color:var(--white);padding:6rem 7vw}
+.route-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:start}
+.nfl-embed{border-radius:5px;overflow:hidden;border:1px solid rgba(61,127,196,.18);height:480px}
+.nfl-embed iframe{width:100%;height:100%;border:none}
+.route-stop{display:flex;gap:1.5rem;margin-bottom:2.2rem;align-items:flex-start}
+.route-stop-num{font-family:'Playfair Display',serif;font-size:1.8rem;color:rgba(61,127,196,.2);line-height:1;min-width:38px;text-align:right}
+.route-stop-info h4{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--white);margin-bottom:.3rem}
+.route-stop-info p{font-size:.8rem;color:rgba(232,242,253,.42);line-height:1.6}
+
+/* FUTURE ROUTE */
+#future-route{background:var(--sky);padding:6rem 7vw}
+.route-timeline{display:flex;overflow-x:auto;margin-top:3rem;padding-bottom:1.5rem;scrollbar-width:none}
+.route-timeline::-webkit-scrollbar{display:none}
+.timeline-stop{flex:0 0 175px;position:relative;padding:0 .8rem;text-align:center}
+.timeline-stop::after{content:'';position:absolute;top:18px;left:50%;right:-50%;height:1px;background:linear-gradient(to right,var(--blue),rgba(61,127,196,.1));z-index:0}
+.timeline-stop:last-child::after{display:none}
+.timeline-dot{width:36px;height:36px;border-radius:50%;background:white;border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;position:relative;z-index:1;font-size:.9rem;box-shadow:0 2px 12px rgba(61,127,196,.15)}
+.timeline-stop.start .timeline-dot{background:var(--blue);border-color:var(--blue)}
+.timeline-name{font-family:'Playfair Display',serif;font-size:.86rem;color:var(--deep);margin-bottom:.3rem}
+.timeline-note{font-size:.67rem;color:var(--muted);line-height:1.4}
+.route-note{background:rgba(61,127,196,.07);border-left:3px solid var(--blue);padding:1.8rem;margin-top:3rem;max-width:700px;border-radius:0 4px 4px 0}
+.route-note p{font-family:'Libre Baskerville',serif;font-style:italic;font-size:.92rem;color:var(--muted);line-height:1.75}
+
+/* CONTACT */
+#contact{background:var(--navy-dark);color:var(--white);text-align:center;padding:7rem 7vw;position:relative;overflow:hidden}
+#contact::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 90%,rgba(61,127,196,.07) 0%,transparent 65%);pointer-events:none}
+.contact-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);color:var(--white);margin-bottom:1.2rem;line-height:1.15}
+.contact-title em{font-style:italic;color:rgba(61,127,196,.85)}
+.contact-lead{font-family:'Libre Baskerville',serif;font-size:.95rem;color:rgba(232,242,253,.42);max-width:520px;margin:0 auto 3.5rem;line-height:1.8}
+.contact-cards{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;position:relative;z-index:1}
+.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(61,127,196,.16);padding:2.2rem 2.8rem;text-decoration:none;color:var(--white);transition:all .3s;min-width:230px;border-radius:4px;display:flex;flex-direction:column;align-items:center;gap:.9rem}
+.contact-card:hover{background:rgba(61,127,196,.09);border-color:rgba(61,127,196,.4);transform:translateY(-3px);box-shadow:0 12px 40px rgba(61,127,196,.1)}
+.contact-card-icon{font-size:1.9rem}
+.contact-card-label{font-size:.59rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(61,127,196,.75)}
+.contact-card-value{font-size:.87rem;color:rgba(232,242,253,.7)}
+.contact-note{font-size:.7rem;color:rgba(232,242,253,.18);letter-spacing:.06em;margin-bottom:3rem}
+.docs-section{border-top:1px solid rgba(61,127,196,.08);padding-top:3rem;position:relative;z-index:1}
+.docs-title{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(61,127,196,.65);margin-bottom:1.5rem}
+.docs-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.doc-link{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:rgba(232,242,253,.55);padding:.75rem 1.4rem;text-decoration:none;font-size:.72rem;letter-spacing:.07em;border-radius:3px;transition:all .2s;display:flex;align-items:center;gap:.5rem}
+.doc-link:hover{background:rgba(61,127,196,.1);color:var(--white);border-color:rgba(61,127,196,.25)}
+
+/* FOOTER */
+footer{background:#040a12;padding:2rem 7vw;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.04)}
+footer .logo img{height:25px;opacity:.3;border-radius:2px}
+footer p{font-size:.67rem;color:rgba(232,242,253,.14);letter-spacing:.04em}
+
+/* SECTION COMMON */
+.section-eyebrow{font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);color:var(--deep);margin-bottom:1.5rem;line-height:1.2}
+.section-title em{font-style:italic;color:var(--blue)}
+.section-lead{font-family:'Libre Baskerville',serif;font-size:1.02rem;color:var(--muted);line-height:1.85;max-width:680px;margin-bottom:2.5rem}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(4,10,18,.97);z-index:1000;align-items:center;justify-content:center;padding:2rem}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:88vh;object-fit:contain;border-radius:2px}
+.lightbox-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;opacity:.35;transition:opacity .2s;font-family:'DM Sans',sans-serif}
+.lightbox-close:hover{opacity:1}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}
+.fade-up.visible{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .masonry-grid{columns:3}
+  .key-specs-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  nav{padding:0 1.5rem}
+  .hero-content{margin-left:1.5rem;margin-right:1.5rem}
+  .hero-photos{display:none}
+  .hero-hull{display:none}
+  section,#gallery,#route,#why,#future-route,#contact{padding:4.5rem 1.5rem}
+  .about-grid,.wauquiez-grid,.route-grid,.specs-intro,.seller-grid,.lifestyle-grid,.why-grid{grid-template-columns:1fr;gap:3rem}
+  .lifestyle-photo.wide{grid-column:1}
+  .masonry-grid{columns:2;padding:0 1.5rem}
+  .why-cards{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:1rem;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><svg height="38" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="220" height="60" rx="6" fill="#3d7fc4"/>
+  <!-- Boat icon -->
+  <g transform="translate(12, 8)" fill="white">
+    <polygon points="18,8 8,32 28,32" fill="none" stroke="white" stroke-width="2"/>
+    <line x1="18" y1="8" x2="18" y2="36" stroke="white" stroke-width="2"/>
+    <line x1="8" y1="36" x2="28" y2="36" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="10" y1="40" x2="26" y2="40" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <!-- Flag -->
+    <polygon points="18,8 18,16 26,12" fill="white"/>
+  </g>
+  <!-- SUGAR text -->
+  <text x="55" y="40" font-family="Arial, sans-serif" font-weight="900" font-size="28" fill="white" letter-spacing="2">SUGAR</text>
+</svg></div>
+  <ul class="nav-links">
+    <li><a href="#why">Why Sugar</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#about">The Boat</a></li>
+    <li><a href="#lifestyle">Life Aboard</a></li>
+    <li><a href="#wauquiez">Wauquiez</a></li>
+    <li><a href="#specs">Specs</a></li>
+    <li><a href="#route">Journey</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Dan</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-texture"></div>
+  <div class="hero-overlay"></div>
+  <div class="wave-lines">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,30 1440,60 L1440,120 L0,120 Z" fill="rgba(61,127,196,1)"/></svg>
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,80 C240,20 480,100 720,60 C960,20 1200,100 1440,80 L1440,120 L0,120 Z" fill="rgba(26,53,96,1)"/></svg>
+  </div>
+  <div class="hero-photos">
+    <div class="hero-photo"><img src="https://lh3.googleusercontent.com/pw/AP1GczN-cW_TwuQFr16j0Yra5qIQoSA-RfWNA6NyXox1A998fDGnBDYCr5EG3RvW9ChpUvIHZ9SqSo_kIA25vZkwEWCGXJtF88C85F2iLUisFOXidZWOhW23=w1200" alt="Sugar sailing"></div>
+    <div class="hero-photo"><img src="https://lh3.googleusercontent.com/pw/AP1GczNsp55P5lKvHwi1R3AZ8OF_S3wRXkt5s5XihvjwOJa4IABrZqKBp2oKrsTG62nukVaty7fMwwlGp5HsQNUScNihHq7ZiNlYsjhEX6-BRxLcnpnxkJN-=w1200" alt="Sugar at anchor"></div>
+    <div class="hero-photo"><img src="https://lh3.googleusercontent.com/pw/AP1GczNtINwkmaS2KvqesClkAud6SPVM4KghZBCSlI4nZ3zZbrypXwCiqicaq4K9BlaeBon1-CAiXqME88i9IBBIXY5BAIETG1vBrJsLpeU5HjjaoIWga6Q-=w1200" alt="Ocean passage"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">For Sale — French Polynesia</div>
+    <div class="hero-logo"><svg height="38" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="220" height="60" rx="6" fill="#3d7fc4"/>
+  <!-- Boat icon -->
+  <g transform="translate(12, 8)" fill="white">
+    <polygon points="18,8 8,32 28,32" fill="none" stroke="white" stroke-width="2"/>
+    <line x1="18" y1="8" x2="18" y2="36" stroke="white" stroke-width="2"/>
+    <line x1="8" y1="36" x2="28" y2="36" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="10" y1="40" x2="26" y2="40" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <!-- Flag -->
+    <polygon points="18,8 18,16 26,12" fill="white"/>
+  </g>
+  <!-- SUGAR text -->
+  <text x="55" y="40" font-family="Arial, sans-serif" font-weight="900" font-size="28" fill="white" letter-spacing="2">SUGAR</text>
+</svg></div>
+    <div class="hero-tagline">Wauquiez Amphitrite 45 MS | Hull #6 of 21 | Proven Offshore Cruiser</div>
+    <div class="hero-price-row">
+      <div class="hero-price">€100,000</div>
+      <div class="hero-price-note">Priced with intention — reflecting seller's timeline, not vessel condition.</div>
+    </div>
+    <div class="hero-location">⚓ Tahiti · Available from July 2026 · EU VAT Paid · French Flag</div>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Contact Dan ↗</a>
+      <a href="#why" class="btn-secondary">Why This Vessel</a>
+    </div>
+    <div class="trust-badges">
+      <div class="trust-badge"><div class="trust-badge-dot"></div>Hull #6 of 21</div>
+      <div class="trust-badge"><div class="trust-badge-dot"></div>EU VAT Paid</div>
+      <div class="trust-badge"><div class="trust-badge-dot"></div>Ocean Proven</div>
+      <div class="trust-badge"><div class="trust-badge-dot"></div>French Flag</div>
+      <div class="trust-badge"><div class="trust-badge-dot"></div>Survey 91/100</div>
+    </div>
+  </div>
+  <div class="hero-hull">
+    <span class="hero-hull-big">#6</span>
+    <div class="hero-hull-label">of 21 ever built</div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<!-- WHY THIS VESSEL -->
+<section id="why">
+  <div class="why-grid">
+    <div class="fade-up">
+      <div class="section-eyebrow" style="color:rgba(61,127,196,.75)">Why This Vessel</div>
+      <h2 class="section-title" style="color:rgba(232,242,253,.92)">Four reasons<br><em>serious buyers</em> choose Sugar.</h2>
+      <p style="font-size:.88rem;color:rgba(232,242,253,.48);line-height:1.85;margin-bottom:2rem">Sugar is an honest, reliable offshore home. While she shows minor, non-critical cosmetic wear typical for a lived-on bluewater cruiser, her structural and mechanical systems have been prioritized and continuously updated for heavy-weather reliability.</p>
+      <div class="why-highlight">
+        <p>"We are good people selling in good faith. The price reflects our timeline, not the boat's value. Everything you see is what you get — and a full technical handover is included."</p>
+      </div>
+    </div>
+    <div class="why-cards fade-up">
+      <div class="why-card">
+        <span class="why-card-icon">🏆</span>
+        <h4>Rare Motorsailer Edition (1 of 21)</h4>
+        <p>The MS configuration offers superior deck saloon volume, protection, and comfort. Built fewer times than most bespoke yachts.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-card-icon">🌊</span>
+        <h4>Ocean-Proven</h4>
+        <p>Recently completed a Mediterranean → Atlantic → Caribbean → Tahiti crossing. Every system tested in real bluewater conditions.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-card-icon">⚡</span>
+        <h4>Full Self-Sufficiency</h4>
+        <p>1,740W solar, Schenker watermaker, Victron 3000 system. Run indefinitely at anchor without shore power or engine.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-card-icon">🚀</span>
+        <h4>Vessel of Execution</h4>
+        <p>Actively sailed and maintained. Ready for immediate departure in July 2026. Nothing needs doing before you cast off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY SPECS WITH ICONS -->
+<section id="key-specs">
+  <div style="text-align:center;margin-bottom:3rem" class="fade-up">
+    <div class="section-eyebrow" style="justify-content:center;display:flex">Key Systems</div>
+    <h2 class="section-title" style="text-align:center">The numbers<br><em>that matter offshore.</em></h2>
+  </div>
+  <div class="key-specs-grid fade-up">
+    <div class="key-spec-card">
+      <div class="key-spec-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </div>
+      <div class="key-spec-num">1,740W</div>
+      <div class="key-spec-label">Solar Array</div>
+      <div class="key-spec-note">8 panels + 3× Victron MPPT — total off-grid independence</div>
+    </div>
+    <div class="key-spec-card">
+      <div class="key-spec-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      </div>
+      <div class="key-spec-num">660Ah</div>
+      <div class="key-spec-label">Battery Bank</div>
+      <div class="key-spec-note">6× Victron AGM 110Ah — brand new Feb 2026</div>
+    </div>
+    <div class="key-spec-card">
+      <div class="key-spec-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+      </div>
+      <div class="key-spec-num">50 L/h</div>
+      <div class="key-spec-label">Watermaker</div>
+      <div class="key-spec-note">Schenker Zen 50 — Aug 2025. No supply runs needed.</div>
+    </div>
+    <div class="key-spec-card">
+      <div class="key-spec-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      </div>
+      <div class="key-spec-num">100HP</div>
+      <div class="key-spec-label">VW Marine TDI</div>
+      <div class="key-spec-note">4,030h · Full service Mar 2026 · 140A alternator</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY MASONRY -->
+<section id="gallery">
+  <div class="gallery-header fade-up">
+    <div class="section-eyebrow" style="color:rgba(61,127,196,.75)">Photography</div>
+    <h2 class="section-title" style="color:rgba(232,242,253,.9)">Sugar in the <em style="color:rgba(61,127,196,.85)">Wild</em></h2>
+  </div>
+  <div class="masonry-grid fade-up">
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczN-cW_TwuQFr16j0Yra5qIQoSA-RfWNA6NyXox1A998fDGnBDYCr5EG3RvW9ChpUvIHZ9SqSo_kIA25vZkwEWCGXJtF88C85F2iLUisFOXidZWOhW23=w600" alt="Hull"><div class="masonry-item-label">Hull</div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNtINwkmaS2KvqesClkAud6SPVM4KghZBCSlI4nZ3zZbrypXwCiqicaq4K9BlaeBon1-CAiXqME88i9IBBIXY5BAIETG1vBrJsLpeU5HjjaoIWga6Q-=w600" alt="Under sail"><div class="masonry-item-label">Under Sail</div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczMnQBWEFOgYykrtBT5Pu2k3BzeVSlJ36DGckfoBr89YhxEzd5EoOd0k-iB_1ld5OBHJyeWFUZc_bMlr_HhtA0a7fXtHsgV6NQEhSMMrngKfIjdeRmK_=w600" alt="Saloon"><div class="masonry-item-label">Saloon</div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNBdo1uZsr9LH5MnWGPyg_7nK9xUQiQrf-qaADdycipYzl7z8l8Hb82mA1QhdqiG9wWSE1W2o8Emay2W5mqr2rUKG92ZONDoQDSABDQWtLQRPRDvPfK=w600" alt="Interior"><div class="masonry-item-label">Interior</div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczMHfwekaUgIa0QSHlzQDInuyvoW9xaEOqXB9Qj17CxxSJAFM_-xP97cJadIYN1fQ-8bvVMXaQ0q9wLaNEm3Ey9E9uraJa0qzYQ7bpq6rsdPTrEa2XO4=w600" alt="Cockpit"><div class="masonry-item-label">Cockpit</div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNsp55P5lKvHwi1R3AZ8OF_S3wRXkt5s5XihvjwOJa4IABrZqKBp2oKrsTG62nukVaty7fMwwlGp5HsQNUScNihHq7ZiNlYsjhEX6-BRxLcnpnxkJN-=w600" alt="At anchor"><div class="masonry-item-label">At Anchor</div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczPBFzSjmcxApzUbzykHmGDN8nb9mZGl4mmqbOQpuYeax43k0Q2vFE4MPe1xG27VdiPFS0hm_gxW8qlAmlXO4IAZ8Q9XkdfDao4eFiYyw4rWh4w1vLBX=w600" alt="Deck"><div class="masonry-item-label">Deck</div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczMHN-v-h219UfQpLpYg4ghl14IA8eRLUPA6W0kLJMxy-WX23EnjjcMi2YS2j9MPWWWMdKNu2aMxAA0bCoeHdnzjPnlQW0VhyqZA-m5D8vO5wjMsstKv=w600" alt="Aft cabin"><div class="masonry-item-label">Aft Cabin</div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczPH3AlEJkF2jrXI8299JwanzR9hmi1vGe6WBKBdn597EyEfIChi8EOw0LYXJiFfZirnBMv-55-d9qn84F-N6jRafj71FhW5D7TgF3W_949JMvxPJDeo=w600" alt="Navigation"><div class="masonry-item-label">Navigation</div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNwR0uSSEATMu6sgeGf045xrNqDqbPQFR2M-I8UL0Brhx-XsepSXOinSqG15rPmpQCSoFEM2eLzC6Lt9Y7eErH3uRc9Uqp9mxRK8Yx9sSDId74y4P_t=w600" alt="Ocean"><div class="masonry-item-label">Ocean Passage</div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNcYTSqvmwHoga7SRjAqdW0ZJL7jd_cHygXjG6gVeM8DvOk10gqqM9yiijFKM-GRXNTk4g7bB6rzFKetsTg434cIsSABlOlEZjmivFhPhVk5wufN6V=w600" alt="Anchored"><div class="masonry-item-label">Anchored Up</div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNz0R8es_ll6nfr9hjEK0x8q4jekCOeqj31PCh0Yb4eUU2sK8jWUyNhCXlAx4Uc6Jx6-sqI0k9bNXLAvXTpLVMAIXAT1XqQ8ohlX0aMbHQxSrd1i83R=w600" alt="Fishing catch"><div class="masonry-item-label">Offshore Catch</div></div>
+  </div>
+  <div class="gallery-footer" style="margin-top:2.5rem">
+    <a href="https://photos.app.goo.gl/aQGQTidw23AV8ZRv9" target="_blank" class="gallery-link">View Full Photo Album on Google Photos →</a>
+  </div>
+</section>
+
+<!-- THE BOAT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="fade-up">
+      <div class="section-eyebrow">The Boat</div>
+      <h2 class="section-title">Fully <em>off-grid.</em><br>Ready to go now.</h2>
+      <p class="section-lead">Sugar is a heavy-displacement bluewater cutter configured for complete independence at sea. Her systems have been proven across 10,000+ nautical miles — from the Mediterranean to French Polynesia.</p>
+      <p style="font-size:.87rem;color:var(--muted);line-height:1.85;margin-bottom:1rem">Sugar is an honest, reliable offshore home. While she shows minor, non-critical cosmetic wear typical for a lived-on bluewater cruiser, her structural and mechanical systems have been prioritized and proactively upgraded for heavy-weather reliability.</p>
+      <p style="font-size:.87rem;color:var(--muted);line-height:1.85;margin-bottom:2.5rem">She arrives in Tahiti in July 2026 — the heart of trade wind season. The next owner does not need to plan a delivery. <strong style="color:var(--deep)">Just arrive and cast off.</strong></p>
+      <div class="survey-badge">
+        <div class="survey-score">91<span>/100</span></div>
+        <div class="survey-text">
+          <h4>Independent Survey — April 2025</h4>
+          <p>Massimiliano Panessa, Studio Panessa<br>Yacht Surveyor (AssocIIMS · YBDSA · ABYC)<br><em style="color:rgba(232,242,253,.32)">"In better condition than most vessels her age."</em></p>
+          <div class="survey-dl"><a href="mailto:danarnon@gmail.com?subject=Sugar Survey Report Request">→ Request full survey report</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="fade-up" style="padding-top:1rem">
+      <div class="stats-row">
+        <div class="stat-block"><div class="stat-block-num">1,740W</div><div class="stat-block-label">Solar Array</div><div class="stat-block-note">8 panels + 3× Victron MPPT controllers</div></div>
+        <div class="stat-block"><div class="stat-block-num">660Ah</div><div class="stat-block-label">House Batteries</div><div class="stat-block-note">6× Victron AGM — brand new Feb 2026</div></div>
+        <div class="stat-block"><div class="stat-block-num">50 L/h</div><div class="stat-block-label">Watermaker</div><div class="stat-block-note">Schenker Zen 50 — Aug 2025</div></div>
+        <div class="stat-block"><div class="stat-block-num">4,030h</div><div class="stat-block-label">Engine Hours</div><div class="stat-block-note">Full 4,000h service — Mar 2026</div></div>
+        <div class="stat-block"><div class="stat-block-num">1,000L</div><div class="stat-block-label">Drinking Water</div><div class="stat-block-note">Dedicated filter + tap. No bottled water.</div></div>
+        <div class="stat-block"><div class="stat-block-num">580L</div><div class="stat-block-label">Diesel</div><div class="stat-block-note">Large-capacity tank — extended offshore range</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE -->
+<section id="lifestyle">
+  <div class="fade-up" style="margin-bottom:4.5rem;text-align:center">
+    <div class="section-eyebrow" style="display:flex;justify-content:center">Life Aboard Sugar</div>
+    <h2 class="section-title" style="text-align:center">Not just a boat.<br><em>A floating life.</em></h2>
+    <p style="font-family:'Libre Baskerville',serif;font-size:1rem;color:var(--muted);line-height:1.85;max-width:600px;margin:0 auto">Sugar has been a home, a fishing platform, and a surf vessel. She is comfortable for 4, spacious for 6 — and fits 10 surfboards without touching the living space.</p>
+  </div>
+
+  <div class="lifestyle-grid">
+    <div class="fade-up">
+      <div class="section-eyebrow">For Surfers</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--deep);margin-bottom:1.2rem;line-height:1.2">Your remote break<br><em style="color:var(--blue)">awaits.</em></h3>
+      <p style="font-size:.87rem;color:var(--muted);line-height:1.85;margin-bottom:1.5rem">Sugar is built to take you to the surf spots that don't appear on tourist maps. From the Mentawais to the atolls of French Polynesia, a vessel like this is the only way in.</p>
+      <blockquote class="strong-quote">Currently carrying ~10 surfboards — stored inside the cabin, on the Whittall ED17 davits (rated 200kg), and at the bow. Zero compromise on living space.</blockquote>
+      <div class="lifestyle-feature"><div class="lifestyle-feature-icon">🏄</div><div><h4>Board Storage Everywhere</h4><p>Inside cabin, on davits, at the bow — space is genuinely not a problem.</p></div></div>
+      <div class="lifestyle-feature"><div class="lifestyle-feature-icon">🗺️</div><div><h4>Access the Inaccessible</h4><p>Tahiti → Fiji → Tonga → Indonesia. The route west passes the best surf on the planet.</p></div></div>
+      <div class="lifestyle-feature"><div class="lifestyle-feature-icon">⚡</div><div><h4>Off-Grid at the Break</h4><p>1,740W solar + watermaker. Anchor at a remote reef for weeks with no marina needed.</p></div></div>
+    </div>
+    <div class="fade-up">
+      <div class="lifestyle-photos">
+        <div class="lifestyle-photo wide" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczPNeG9wYgYBo_TwBCcaghc2aOyyEKZ4klpQIdW_7w-HOLYZGbHoMY8ip7ANoiuN9mBi3Tga2_25j30Yv-EYQUOVpJDXBLKTYN_TSvtIk8QggBcHSp_h=w1200" alt="Tropical anchorage"></div>
+        <div class="lifestyle-photo" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNwR0uSSEATMu6sgeGf045xrNqDqbPQFR2M-I8UL0Brhx-XsepSXOinSqG15rPmpQCSoFEM2eLzC6Lt9Y7eErH3uRc9Uqp9mxRK8Yx9sSDId74y4P_t=w800" alt="Passage"></div>
+        <div class="lifestyle-photo" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNcYTSqvmwHoga7SRjAqdW0ZJL7jd_cHygXjG6gVeM8DvOk10gqqM9yiijFKM-GRXNTk4g7bB6rzFKetsTg434cIsSABlOlEZjmivFhPhVk5wufN6V=w800" alt="At anchor"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lifestyle-grid" style="margin-top:5rem">
+    <div class="fade-up" style="order:2">
+      <div class="lifestyle-photos">
+        <div class="lifestyle-photo wide" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNz0R8es_ll6nfr9hjEK0x8q4jekCOeqj31PCh0Yb4eUU2sK8jWUyNhCXlAx4Uc6Jx6-sqI0k9bNXLAvXTpLVMAIXAT1XqQ8ohlX0aMbHQxSrd1i83R=w1200" alt="Offshore catch"></div>
+        <div class="lifestyle-photo" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczMaa4NMOUT3bT-RpaF25AiQZuEydzquli0SnPJAF9iNsE0qLEZMgwJiRkeQLLR1LYLhLN3n-7o4B9RqqoigSW-b-KGw-u9AH-DRlTrnucOhwa_yAygZ=w800" alt="Saloon"></div>
+        <div class="lifestyle-photo" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczN79MAK8cOeDxAa8ws_Kqz-22iLW-aBPkP1ZdSqMMGvDtOsXro5whBFe54wfF9DvYMI_bFPaSN0118ssrtXfZWtovbwvV1DMgAlBu46rXt5EEme8tqQ=w800" alt="Interior"></div>
+      </div>
+    </div>
+    <div class="fade-up" style="order:1">
+      <div class="section-eyebrow">For Fishermen</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--deep);margin-bottom:1.2rem;line-height:1.2">Dinner comes<br><em style="color:var(--blue)">from the ocean.</em></h3>
+      <p style="font-size:.87rem;color:var(--muted);line-height:1.85;margin-bottom:1.5rem">Sugar has been a consistently productive fishing platform throughout the voyage. Tuna, mahi-mahi, wahoo — offshore passages are rarely empty-handed.</p>
+      <div class="lifestyle-feature"><div class="lifestyle-feature-icon">🎣</div><div><h4>2 Offshore Fishing Rods</h4><p>Rigged and ready. Trolling lines trailing on every passage — part of the daily routine.</p></div></div>
+      <div class="lifestyle-feature"><div class="lifestyle-feature-icon">🔥</div><div><h4>Galley + Magma BBQ</h4><p>Two fridges, gas oven, and a party-size Magma gas BBQ on the stern — everything you need when you land something big.</p></div></div>
+      <div class="lifestyle-feature"><div class="lifestyle-feature-icon">🎵</div><div><h4>Premium Cockpit Audio</h4><p>Fusion dual-zone speaker system upgraded 2025. Music for the fishing line, music for the anchorage.</p></div></div>
+    </div>
+  </div>
+
+  <div class="lifestyle-grid" style="margin-top:5rem">
+    <div class="fade-up">
+      <div class="section-eyebrow">For Families</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--deep);margin-bottom:1.2rem;line-height:1.2">A real home.<br><em style="color:var(--blue)">On the water.</em></h3>
+      <p style="font-size:.87rem;color:var(--muted);line-height:1.85;margin-bottom:1.5rem">The elevated deck saloon gives Sugar a bright, panoramic interior that genuinely feels like a living room at sea. She is comfortable for 4, and spacious for 6.</p>
+      <blockquote class="strong-quote">"Even an orca won't break through this hull." — The GRP construction is exceptionally thick and robust, a Wauquiez hallmark that gives real offshore confidence.</blockquote>
+      <div class="lifestyle-feature"><div class="lifestyle-feature-icon">🏠</div><div><h4>Liveaboard Ready</h4><p>2 double cabins, panoramic saloon, washing machine, espresso machine — all the comforts for long-term life aboard.</p></div></div>
+      <div class="lifestyle-feature"><div class="lifestyle-feature-icon">👶</div><div><h4>Safe for Kids</h4><p>High 60cm guard rails, stable heavy-displacement hull, secure centre cockpit completely separated from the living area.</p></div></div>
+      <div class="lifestyle-feature"><div class="lifestyle-feature-icon">💧</div><div><h4>No Supply Runs</h4><p>50 L/h watermaker + dedicated drinking filter and tap — fresh water straight from the tanks. No plastic bottles.</p></div></div>
+    </div>
+    <div class="fade-up">
+      <div class="lifestyle-photos">
+        <div class="lifestyle-photo wide" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczNBdo1uZsr9LH5MnWGPyg_7nK9xUQiQrf-qaADdycipYzl7z8l8Hb82mA1QhdqiG9wWSE1W2o8Emay2W5mqr2rUKG92ZONDoQDSABDQWtLQRPRDvPfK=w1200" alt="Living space"></div>
+        <div class="lifestyle-photo" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczMnQBWEFOgYykrtBT5Pu2k3BzeVSlJ36DGckfoBr89YhxEzd5EoOd0k-iB_1ld5OBHJyeWFUZc_bMlr_HhtA0a7fXtHsgV6NQEhSMMrngKfIjdeRmK_=w800" alt="Saloon interior"></div>
+        <div class="lifestyle-photo" onclick="openLightbox(this)"><img src="https://lh3.googleusercontent.com/pw/AP1GczMaa4NMOUT3bT-RpaF25AiQZuEydzquli0SnPJAF9iNsE0qLEZMgwJiRkeQLLR1LYLhLN3n-7o4B9RqqoigSW-b-KGw-u9AH-DRlTrnucOhwa_yAygZ=w800" alt="Home feel"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELLER -->
+<section id="seller">
+  <div class="seller-grid">
+    <div class="fade-up">
+      <div class="section-eyebrow">About the Owner</div>
+      <h2 class="section-title">Sold with care.<br><em>By someone who knows.</em></h2>
+      <blockquote class="seller-story">"After a year of unforgettable adventures at sea, we've decided it's time to move on to the next chapter of our lives. We're choosing to return to a more stable environment — closer to family and friends who have supported us from a distance. This isn't a final goodbye to the sea. We're certain we'll return to complete the circumnavigation later in life. We are good people who want to sell Sugar with a good feeling, to someone who will appreciate the quality and safety she offers."</blockquote>
+      <p style="font-size:.85rem;color:var(--muted);line-height:1.85;margin-bottom:1.5rem">The sale is direct from owner. The market position at €100,000 is a strategic decision for a smooth transition — it reflects seller timeline, not vessel condition. Full documentation, recent survey details, and a video walkthrough are available upon request.</p>
+      <div class="seller-tags">
+        <span class="seller-tag">QC Manager — International Marine Sports Company</span>
+        <span class="seller-tag">Technical Background</span>
+        <span class="seller-tag">Preventative Maintenance Only</span>
+        <span class="seller-tag">French Flag — Advantage in FP</span>
+        <span class="seller-tag">Full Technical Handover Included</span>
+        <span class="seller-tag">Video Call Available Anytime</span>
+      </div>
+    </div>
+    <div class="fade-up">
+      <div class="section-eyebrow" style="margin-top:.5rem">Maintenance Philosophy</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--deep);margin-bottom:1.5rem;line-height:1.3">Everything maintained <em style="font-style:italic;color:var(--blue)">before it breaks.</em></h3>
+      <p style="font-size:.86rem;color:var(--muted);line-height:1.85;margin-bottom:1.5rem">Every system has been serviced before it showed signs of failure. The boat carries a complete professional tool set and spare parts for all major systems.</p>
+      <div class="redundancy-box">
+        <h4>Built-in Redundancy</h4>
+        <div class="redundancy-item">Spare autopilot drive unit + 2× control units + spare J300 computer</div>
+        <div class="redundancy-item">Backup Racor fuel filter permanently installed and ready</div>
+        <div class="redundancy-item">2× automatic electric bilge pumps + manual Whale pump</div>
+        <div class="redundancy-item">Emergency tiller fitted and accessible from the cockpit</div>
+        <div class="redundancy-item">2× anchors (Spade 30kg + Brick 30kg) + 2× para-anchors</div>
+        <div class="redundancy-item">If one system fails — switch to backup and keep sailing. No drama.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAUQUIEZ -->
+<section id="wauquiez">
+  <div class="wauquiez-grid">
+    <div class="fade-up">
+      <div class="section-eyebrow" style="color:rgba(61,127,196,.72)">The Shipyard</div>
+      <h2 class="section-title" style="color:rgba(232,242,253,.9)">Why <em>Wauquiez</em><br>is different.</h2>
+      <p style="font-size:.86rem;color:rgba(232,242,253,.48);line-height:1.85;margin-bottom:2.5rem">Henri Wauquiez founded his shipyard in 1965 in northern France, converting his family's tannery into one of the most respected boatbuilding operations in Europe. From the start, his obsession was quality at the standard of the finest English shipyards.</p>
+      <div class="wauquiez-fact"><h4>Hand-built, not mass-produced</h4><p>Balsa-sandwich decks, carefully selected hardware, interior joinery finished to a level that rivals bespoke furniture. The Amphitrite 45 MS is a serious bluewater cruiser — centre cockpit, elevated deck saloon, lead keel. Designed to cross oceans.</p></div>
+      <div class="wauquiez-fact"><h4>Designed by Holman & Pye</h4><p>The British naval architecture firm behind many of Wauquiez's finest hulls. Heavy displacement, predictable and reassuring motion in big seas — the comfort ratio ranks in the top tier of cruising yachts this size.</p></div>
+      <div class="wauquiez-fact"><h4>Only 21 ever built</h4><p>The Amphitrite 45 MS was produced between 1986 and 1994. Only 21 hulls were completed. Finding one in this condition, ocean-proven, in Tahiti, ready to go — is genuinely rare.</p></div>
+      <p style="font-size:.74rem;color:rgba(232,242,253,.22);line-height:1.7;margin-top:2rem">More: <a href="https://www.wauquiez.com" target="_blank" style="color:rgba(61,127,196,.55)">wauquiez.com</a> · <a href="https://sailboatdata.com/sailboat/amphitrite-45-ms-wauquiez/" target="_blank" style="color:rgba(61,127,196,.55)">sailboatdata.com</a> · <a href="https://sailboat.guide/wauquiez/amphitrite-45-ms" target="_blank" style="color:rgba(61,127,196,.55)">sailboat.guide</a></p>
+    </div>
+    <div class="fade-up" style="padding-top:1.5rem">
+      <blockquote class="wauquiez-quote">"Comfortable, fast and reliable — the Wauquiez DNA has never changed since Henri first took to the water in 1964."</blockquote>
+      <div class="hull-number">
+        <span class="hull-number-big">#6</span>
+        <div class="hull-number-label">Sugar's Hull Number<br>One of only 21 built worldwide<br>A collector's piece</div>
+      </div>
+      <p style="font-size:.75rem;color:rgba(232,242,253,.27);line-height:1.75;margin-top:1.5rem">Wauquiez yachts retain their value and attract serious sailors even decades after launch. Sugar's 91/100 survey score confirms: "in better condition than most vessels her age."</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section id="specs">
+  <div class="specs-intro fade-up">
+    <div>
+      <div class="section-eyebrow">Specifications</div>
+      <h2 class="section-title">Every<br><em>detail.</em></h2>
+    </div>
+    <p class="section-lead" style="margin-bottom:0">Full technical specifications — priority given to the systems that matter for offshore sailing. Key equipment links to manufacturer pages. Verified and updated since purchase in August 2025.</p>
+  </div>
+  <div class="specs-tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'general')">General</button>
+    <button class="tab-btn" onclick="switchTab(this,'engine')">Engine & Drive</button>
+    <button class="tab-btn" onclick="switchTab(this,'electrical')">Electrical & Solar</button>
+    <button class="tab-btn" onclick="switchTab(this,'rigging')">Rigging & Sails</button>
+    <button class="tab-btn" onclick="switchTab(this,'interior')">Interior & Galley</button>
+    <button class="tab-btn" onclick="switchTab(this,'safety')">Safety</button>
+    <button class="tab-btn" onclick="switchTab(this,'nav')">Navigation</button>
+  </div>
+  <div id="tab-general" class="tab-panel active">
+    <table class="specs-table">
+      <tr><td>Builder</td><td>Henri Wauquiez, Neuville-en-Ferrain, France</td></tr>
+      <tr><td>Model</td><td>Amphitrite MS 45 <span class="spec-tag key">Hull #6 of 21</span> <span class="spec-tag">Collector's Piece</span></td></tr>
+      <tr><td>Year Built</td><td>1989</td></tr>
+      <tr><td>Designer</td><td>Holman & Pye (Donald Pye)</td></tr>
+      <tr><td>LOA / LWL</td><td>13.60 m / 10.50 m</td></tr>
+      <tr><td>Beam / Draft</td><td>4.20 m / 1.92 m</td></tr>
+      <tr><td>Displacement</td><td>15,000 kg — heavy bluewater displacement, exceptional stability</td></tr>
+      <tr><td>Ballast (Lead)</td><td>4,600 kg</td></tr>
+      <tr><td>Sail Area</td><td>102 m²</td></tr>
+      <tr><td>Hull Construction</td><td>GRP fibreglass — exceptional wall thickness and structural integrity</td></tr>
+      <tr><td>Keel Type</td><td>Fin keel, rudder on skeg</td></tr>
+      <tr><td>Flag / Registration</td><td>French Flag <span class="spec-tag">EU VAT Paid</span> — AY D71838 valid to 06/08/2035</td></tr>
+      <tr><td>Drinking Water</td><td>1,000 L (2× 500L stainless tanks) + dedicated filter system and tap</td></tr>
+      <tr><td>Diesel</td><td>580 L large-capacity tank — extended offshore range</td></tr>
+      <tr><td>Berths</td><td>2× double cabins + 1× single + saloon convertible. Comfortable for 4, spacious for 6.</td></tr>
+      <tr><td>Heads</td><td>2× electric toilets, 2× showers</td></tr>
+    </table>
+  </div>
+  <div id="tab-engine" class="tab-panel">
+    <table class="specs-table">
+      <tr><td>Engine</td><td>Volkswagen Marine TDI 100-5 <span class="spec-tag key">100HP / 73.6kW</span></td></tr>
+      <tr><td>Alternator</td><td>140 Amp high-output <span class="spec-tag key">Key</span></td></tr>
+      <tr><td>Serial No. / Hours</td><td>BC4001010 / 4,030h</td></tr>
+      <tr><td>Last Major Service</td><td>March 2026 — timing belts, cooling system, water pumps, rollers <span class="spec-tag new">Recent</span></td></tr>
+      <tr><td>Gearbox</td><td>ZF-Hurth HSW250A-2.0 Hydraulic</td></tr>
+      <tr><td>Propeller</td><td>MaxProp 4-blade folding <a href="https://www.maxprop.it" target="_blank">↗</a></td></tr>
+      <tr><td>Performance</td><td>6 kts cruise / 8 kts max / ~3.5 L/h consumption</td></tr>
+      <tr><td>Engine Mounts</td><td>Replaced Oct 2024</td></tr>
+      <tr><td>Fuel System</td><td>New pipes (Aug 2024) · New Racor separator (Feb 2026) · Spare Racor filter (Oct 2024) · New fuel sensor (Mar 2026)</td></tr>
+      <tr><td>Bow Thruster</td><td>Fully refurbished Aug 2025</td></tr>
+      <tr><td>Windlass</td><td>Lofrans Project X3 <a href="https://www.lofrans.it" target="_blank">↗</a></td></tr>
+      <tr><td>Davits</td><td>Whittall ED17 — rated to 200 kg capacity <span class="spec-tag key">Key</span></td></tr>
+      <tr><td>Seacocks</td><td>All 20 replaced with quality bronze (2023)</td></tr>
+      <tr><td>Antifouling</td><td>August 2025</td></tr>
+    </table>
+  </div>
+  <div id="tab-electrical" class="tab-panel">
+    <table class="specs-table">
+      <tr><td>Watermaker</td><td>Schenker Zen 50 — 50 L/h — Aug 2025 <span class="spec-tag key">Key</span> <a href="https://www.schenker-watermakers.com" target="_blank">↗</a></td></tr>
+      <tr><td>Inverter/Charger</td><td>Victron MultiPlus 3000 — Upgraded Feb 2026 <span class="spec-tag key">Key</span> <a href="https://www.victronenergy.com/inverters-chargers/multiplus" target="_blank">↗</a></td></tr>
+      <tr><td>House Batteries</td><td>6× Victron AGM 110Ah — Brand new Feb 2026 <span class="spec-tag new">New</span></td></tr>
+      <tr><td>Solar — Total</td><td>1,740W across 8 panels</td></tr>
+      <tr><td>Solar 1</td><td>2× 310W flexible + Victron MPPT 100/30 — Aug 2025 <a href="https://www.victronenergy.com" target="_blank">↗</a></td></tr>
+      <tr><td>Solar 2</td><td>4× 160W flexible + Victron MPPT 100/50 — 2024</td></tr>
+      <tr><td>Solar 3 (Davits)</td><td>2× 175W + 1× 130W rigid + Victron MPPT 100/20 — 2024</td></tr>
+      <tr><td>Engine Battery</td><td>95Ah AGM (May 2024)</td></tr>
+      <tr><td>Thruster Batteries</td><td>2× Optima AGM</td></tr>
+      <tr><td>Alternator</td><td>140 Amp high-output</td></tr>
+      <tr><td>Battery Charger</td><td>Quick SBC700 65A</td></tr>
+      <tr><td>System Monitor</td><td>Victron Cerbo GX + BMV 712 — New Feb 2026 <a href="https://www.victronenergy.com/panel-systems-remote-monitoring/cerbo-gx" target="_blank">↗</a></td></tr>
+      <tr><td>Internet</td><td>Starlink Mini — Aug 2025 <a href="https://www.starlink.com/maritime" target="_blank">↗</a></td></tr>
+      <tr><td>Air Conditioning</td><td>220V — saloon & aft cabin — 2024 (shore power)</td></tr>
+    </table>
+  </div>
+  <div id="tab-rigging" class="tab-panel">
+    <table class="specs-table">
+      <tr><td>Rig Type</td><td>Cutter sloop, deck-stepped aluminium mast (Francespar)</td></tr>
+      <tr><td>Standing Rigging</td><td>Replaced 2017, professionally inspected & tensioned Jan 2026</td></tr>
+      <tr><td>Forestay</td><td>Replaced July 2023</td></tr>
+      <tr><td>Genoa Furler</td><td>Facnor LS290 — New July 2023 <a href="https://www.facnor.com" target="_blank">↗</a></td></tr>
+      <tr><td>Running Rigging</td><td>New halyards & sheets (Jul 2023), refreshed 2026</td></tr>
+      <tr><td>Winches</td><td>7 total: 5× Barbarossa cockpit + 2× mast — serviced every 4 months</td></tr>
+      <tr><td>Mainsail</td><td>38 m² in-mast furling (2017) — robust, strong</td></tr>
+      <tr><td>Genoa</td><td>64 m², Dacron (2017) — serviced & reinforced Oct 2025</td></tr>
+      <tr><td>Gennaker</td><td>New with snuffer — Aug 2025 <span class="spec-tag new">New</span> — easy short-handed deployment</td></tr>
+      <tr><td>Other Sails</td><td>Staysail (heavy weather), Yankee, Gale sail, Asymmetric spinnaker</td></tr>
+      <tr><td>Bowsprit</td><td>Stainless steel sliding bowsprit</td></tr>
+      <tr><td>Main Anchor</td><td>Spade 30kg + 105m × 10mm chain</td></tr>
+      <tr><td>Secondary Anchor</td><td>Brick 30kg + chain & rope (2023)</td></tr>
+    </table>
+  </div>
+  <div id="tab-interior" class="tab-panel">
+    <table class="specs-table">
+      <tr><td>Layout</td><td>Centre cockpit — elevated deck saloon — 2 double cabins aft + forward</td></tr>
+      <tr><td>Headroom</td><td>~1.93m throughout saloon & cabins — excellent</td></tr>
+      <tr><td>Drinking Water</td><td>Dedicated filter system + separate drinking tap. No bottled water required.</td></tr>
+      <tr><td>Refrigeration</td><td>2× fixed fridges (front opening + top opening)</td></tr>
+      <tr><td>Cooker</td><td>Alpes 3-burner gas + oven. 4× European 3kg gas bottles.</td></tr>
+      <tr><td>BBQ</td><td>Magma gas party-size — 2026 <a href="https://www.magmaproducts.com" target="_blank">↗</a></td></tr>
+      <tr><td>Espresso</td><td>Sage Bambino + milk frother</td></tr>
+      <tr><td>Water Heater</td><td>Raritan 75L — shore power + engine cooling</td></tr>
+      <tr><td>Toilets / Showers</td><td>2× electric toilets, 2× showers, 2× 50L holding tanks</td></tr>
+      <tr><td>Washing Machine</td><td>Installed stern shower — 2024</td></tr>
+      <tr><td>Fans</td><td>5× Caframo Sirocco fans</td></tr>
+      <tr><td>Fishing</td><td>2× offshore fishing rods (rigged and ready)</td></tr>
+      <tr><td>Board Storage</td><td>~10 surfboards stored onboard (cabin, Whittall ED17 davits, bow)</td></tr>
+      <tr><td>Tender</td><td>Protender 3.10 RIB (2025) + Tahaiso 15hp 2-stroke</td></tr>
+      <tr><td>Tools & Spares</td><td>Complete professional tool set + extensive spares for all systems</td></tr>
+      <tr><td>Cockpit Speakers</td><td>Fusion dual-zone — premium quality, upgraded 2025</td></tr>
+    </table>
+  </div>
+  <div id="tab-safety" class="tab-panel">
+    <table class="specs-table">
+      <tr><td>Life Raft</td><td>Plastimo TransOcean 6-person ISO9650-1 — service Apr 2028 <a href="https://www.plastimo.com" target="_blank">↗</a></td></tr>
+      <tr><td>EPIRB</td><td>Ocean Signal EPIRB1 — New 2024, battery exp. 2027 <a href="https://oceansignal.com" target="_blank">↗</a></td></tr>
+      <tr><td>Life Jackets</td><td>6× 150N automatic inflatable (CE marked, in date)</td></tr>
+      <tr><td>Bilge Pumps</td><td>2× automatic electric + mast alarm light + manual Whale pump</td></tr>
+      <tr><td>Fire Extinguishers</td><td>4× 2kg ABC powder — saloon, aft cabin, fore cabin, cockpit</td></tr>
+      <tr><td>Emergency Tiller</td><td>Fitted and accessible</td></tr>
+      <tr><td>Drogues</td><td>2× floating anchors (para-anchors)</td></tr>
+      <tr><td>Guard Rails</td><td>High 60cm rails + boarding gate both sides + full nylon safety net</td></tr>
+      <tr><td>Harnesses</td><td>Jackstay pad eyes + 4× cockpit strongpoints</td></tr>
+      <tr><td>Medical</td><td>Full emergency medical kit</td></tr>
+      <tr><td>Flares</td><td>In date</td></tr>
+    </table>
+  </div>
+  <div id="tab-nav" class="tab-panel">
+    <table class="specs-table">
+      <tr><td>Internet</td><td>Starlink Mini — Aug 2025 <a href="https://www.starlink.com/maritime" target="_blank">↗</a></td></tr>
+      <tr><td>Chartplotter</td><td>Raymarine Axiom 7 (2024) <a href="https://www.raymarine.com" target="_blank">↗</a></td></tr>
+      <tr><td>Autopilot</td><td>Simrad AP22 + Robertson J300 + HLD2000 hydraulic pump. Includes spare drive unit + 2× control units + spare J300. <a href="https://www.simrad-yachting.com" target="_blank">↗</a></td></tr>
+      <tr><td>Radar</td><td>Furuno 1715 <a href="https://www.furuno.com" target="_blank">↗</a></td></tr>
+      <tr><td>AIS</td><td>AIS transponder + new antenna & cable (2024)</td></tr>
+      <tr><td>VHF</td><td>Radio Oceans RO4700 + new antenna & cable (2023)</td></tr>
+      <tr><td>Wind / Instruments</td><td>B&G Hydra 2000 — wind speed, direction, depth</td></tr>
+      <tr><td>Navigation PC</td><td>Laptop + navigation software at chart table</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="route">
+  <div class="fade-up" style="margin-bottom:4rem">
+    <div class="section-eyebrow" style="color:rgba(61,127,196,.72)">The Journey</div>
+    <h2 class="section-title" style="color:rgba(232,242,253,.9)">Sugar's <em>track record.</em></h2>
+    <p style="font-size:.86rem;color:rgba(232,242,253,.45);line-height:1.85;max-width:580px">Every system listed in the specs above has been tested in real-world conditions across 10,000+ nautical miles. This is an ocean-proven vessel — not a marina queen being sold as one.</p>
+  </div>
+  <div class="route-grid">
+    <div class="fade-up">
+      <div class="route-stop"><div class="route-stop-num">01</div><div class="route-stop-info"><h4>Mediterranean</h4><p>Purchased in Italy (Aug 2025). Sailed the Med extensively. Professional survey completed April 2025 in Marina di Ragusa — 91/100.</p></div></div>
+      <div class="route-stop"><div class="route-stop-num">02</div><div class="route-stop-info"><h4>Atlantic Crossing</h4><p>Canaries to the Caribbean via the classic trade wind route. Sugar performed exactly as a Wauquiez should.</p></div></div>
+      <div class="route-stop"><div class="route-stop-num">03</div><div class="route-stop-info"><h4>Caribbean</h4><p>Island-hopping through the Eastern Caribbean. Currently here, sailing west toward Tahiti.</p></div></div>
+      <div class="route-stop"><div class="route-stop-num">04</div><div class="route-stop-info"><h4>Tahiti — July 2026</h4><p>Arrives in Papeete in time for trade wind season. The next owner takes over here, ready to go.</p></div></div>
+      <a href="https://www.noforeignland.com/map/boat/6755394716182991" target="_blank" class="btn-secondary" style="margin-top:1.5rem">View Live Track on NoForeignLand →</a>
+    </div>
+    <div class="nfl-embed fade-up">
+      <iframe src="https://www.noforeignland.com/map/boat/6755394716182991" title="Sugar voyage track" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR ROUTE -->
+<section id="future-route">
+  <div class="fade-up">
+    <div class="section-eyebrow">Your Route</div>
+    <h2 class="section-title">The <em>timing</em> is everything.</h2>
+    <p class="section-lead">July–August is the heart of trade wind season in French Polynesia. The route west is proven, predictable, and full of world-class surf. Sugar is already in position.</p>
+  </div>
+  <div class="route-timeline fade-up">
+    <div class="timeline-stop start"><div class="timeline-dot">🌺</div><div class="timeline-name">Tahiti</div><div class="timeline-note">Papeete<br>July 2026</div></div>
+    <div class="timeline-stop"><div class="timeline-dot">🏝</div><div class="timeline-name">Bora Bora</div><div class="timeline-note">Society Islands<br>1–2 weeks</div></div>
+    <div class="timeline-stop"><div class="timeline-dot">🏄</div><div class="timeline-name">Huahine</div><div class="timeline-note">Surf breaks<br>en route</div></div>
+    <div class="timeline-stop"><div class="timeline-dot">🌊</div><div class="timeline-name">Fiji</div><div class="timeline-note">~1,200nm west<br>Sept passage</div></div>
+    <div class="timeline-stop"><div class="timeline-dot">🗺</div><div class="timeline-name">New Caledonia</div><div class="timeline-note">Nouméa<br>October</div></div>
+    <div class="timeline-stop"><div class="timeline-dot">🌿</div><div class="timeline-name">New Zealand</div><div class="timeline-note">Bay of Islands<br>November</div></div>
+    <div class="timeline-stop"><div class="timeline-dot">🦘</div><div class="timeline-name">Australia</div><div class="timeline-note">Sydney / Queensland<br>End destination</div></div>
+  </div>
+  <div class="route-note fade-up">
+    <p>"August is the perfect window. Trade winds are reliable, the route is well-documented, and Sugar is already there. You don't need to plan a delivery — just show up and sail."</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-eyebrow" style="color:rgba(61,127,196,.68)">Get in Touch</div>
+  <h2 class="contact-title">Serious inquiries<br><em>welcome.</em></h2>
+  <p class="contact-lead">Full documentation, recent survey details, and video walk-throughs available upon request. Viewings in Tahiti from July 2026. Dan responds within 24 hours.</p>
+  <div class="contact-cards">
+    <a href="https://wa.me/972585929737" target="_blank" class="contact-card">
+      <div class="contact-card-icon">💬</div>
+      <div class="contact-card-label">WhatsApp</div>
+      <div class="contact-card-value">+972 58 592 9737</div>
+    </a>
+    <a href="mailto:danarnon@gmail.com" class="contact-card">
+      <div class="contact-card-icon">✉️</div>
+      <div class="contact-card-label">Email</div>
+      <div class="contact-card-value">danarnon@gmail.com</div>
+    </a>
+  </div>
+  <p class="contact-note">Dan Arnon · Owner · Video call available · Serious inquiries only</p>
+  <div class="docs-section">
+    <div class="docs-title">Documentation Available on Request</div>
+    <div class="docs-links">
+      <a href="mailto:danarnon@gmail.com?subject=Sugar Survey Report" class="doc-link">📋 Survey Report (91/100) — Apr 2025</a>
+      <a href="mailto:danarnon@gmail.com?subject=Sugar Inventory Request" class="doc-link">📄 Full Inventory & Condition Report</a>
+      <a href="mailto:danarnon@gmail.com?subject=Sugar Video Walkthrough" class="doc-link">🎥 Video Walkthrough</a>
+      <a href="https://photos.app.goo.gl/aQGQTidw23AV8ZRv9" target="_blank" class="doc-link">📸 Full Photo Album</a>
+      <a href="https://www.noforeignland.com/map/boat/6755394716182991" target="_blank" class="doc-link">🗺 Live Vessel Track</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo"><svg height="38" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="220" height="60" rx="6" fill="#3d7fc4"/>
+  <!-- Boat icon -->
+  <g transform="translate(12, 8)" fill="white">
+    <polygon points="18,8 8,32 28,32" fill="none" stroke="white" stroke-width="2"/>
+    <line x1="18" y1="8" x2="18" y2="36" stroke="white" stroke-width="2"/>
+    <line x1="8" y1="36" x2="28" y2="36" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="10" y1="40" x2="26" y2="40" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <!-- Flag -->
+    <polygon points="18,8 18,16 26,12" fill="white"/>
+  </g>
+  <!-- SUGAR text -->
+  <text x="55" y="40" font-family="Arial, sans-serif" font-weight="900" font-size="28" fill="white" letter-spacing="2">SUGAR</text>
+</svg></div>
+  <p>Wauquiez Amphitrite 45 MS · Hull #6 of 21 · 1989 · €100,000 · Tahiti · EU VAT Paid · French Flag</p>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function switchTab(btn,id){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+id).classList.add('active');
+}
+function openLightbox(el){
+  const img=el.querySelector('img');
+  const src=img.src.replace(/=w\d+/,'=w1600');
+  document.getElementById('lightbox-img').src=src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.08});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
